@@ -42,6 +42,7 @@ header h1{
 /*MAIN*/
 main{
   background-color: #808080;
+  min-height: calc(100vh - 45px);
 }
 
 .container-mdg{

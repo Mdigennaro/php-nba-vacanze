@@ -2,7 +2,27 @@
 
 include_once __DIR__. './php/database.php';
 
+$filteredMatches = [];
 
+if (isset($_GET['city'])) {
+  foreach($matches as $match){
+    if (($_GET['city'] === 'Boston') && in_array('Boston', $match )) {
+      $filteredMatches[] = $match;
+    }elseif (($_GET['city'] === 'Brooklyn') && in_array('Brooklyn', $match )) {
+      $filteredMatches[] = $match;
+    }elseif(($_GET['city'] === 'Cleveland') && in_array('Cleveland', $match)){
+      $filteredMatches[] = $match;
+    }elseif (($_GET['city'] === 'Denver') && in_array('Denver', $match)){
+      $filteredMatches[] = $match;
+    }elseif (($_GET['city'] === 'Detroit') && in_array('Detroit', $match)){
+      $filteredMatches[] = $match;
+    }elseif(($_GET['city'] === 'Phoenix') && in_array('Phoenix', $match)){
+      $filteredMatches[] = $match;
+    }
+  }
+}else{
+  $filteredMatches = $matches;
+}
 ?>
 
 <!DOCTYPE html>
@@ -35,9 +55,12 @@ include_once __DIR__. './php/database.php';
         <span class="mx-2">Home</span>
         <select class="form-select" aria-label="Default select example">
           <option selected>Seleziona una città</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
+          <option value="Boston">Boston</option>
+          <option value="Brooklyn">Brooklyn</option>
+          <option value="Cleveland">Cleveland</option>
+          <option value="Denver">Denver</option>
+          <option value="Detroit">Detroit</option>
+          <option value="Phoenix">Phoenix</option>
         </select> 
       </div>
     </div>
@@ -47,7 +70,7 @@ include_once __DIR__. './php/database.php';
   <main>
     <div class="container-mdg">
 
-      <?php foreach($matches as $match): ?>
+      <?php foreach($filteredMatches as $match): ?>
         <div class="box-game">
         
           <div class="home-player">
