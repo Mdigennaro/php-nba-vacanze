@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Exo', sans-serif;
+}
+
+/*HEADER*/
+
+header{
+  height: 45px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+header .header-left{
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+header .home-select{
+  vertical-align: middle;
+}
+
+header h1{
+  font-size: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+}
+
+.header-left select{
+  padding: 1px 0;
+  padding-right: 25px;
+}
+
+/*MAIN*/
+main{
+  background-color: #808080;
+}
+
+.container-mdg{
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.box-game{
+  padding: 10px 40px;
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.box-game:first-of-type{
+  margin-top: 0;
+}
+
+.box-game img{
+  width: 80px;
+  margin: 0 20px;
+}
+
+.home-player, .stadium, .away-player{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: calc(100% / 3);
+}
+
+.name{
+  width: 140px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+h4{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h2{
+  font-weight: bolder;
+}
+
+.stadium{
+  flex-direction: column;
+  justify-content: center;
+}
